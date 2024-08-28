@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrasi Pendaftaran Wisata</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #0e373a, #243b4a);
+            color: #ffffff;
+        }
+
+        .registration-form {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px 40px;
+            border-radius: 15px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+            width: 400px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+        }
+
+        .registration-form h2 {
+            margin-bottom: 20px;
+            color: #ffcc00;
+        }
+
+        .registration-form input, .registration-form select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+
+        .registration-form input[type="submit"] {
+            background-color: #ffcc00;
+            color: #000;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .registration-form input[type="submit"]:hover {
+            background-color: #ffc107;
+        }
+
+        .error {
+            color: #ff6b6b;
+            font-size: 0.9em;
+            margin-top: -10px;
+            margin-bottom: 10px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="registration-form">
+        <h2>Pendaftaran Wisata</h2>
+        <form id="tourForm" onsubmit="return validateForm()">
+            <input type="text" id="name" placeholder="Nama Lengkap" required>
+            <div class="error" id="nameError">Nama harus diisi!</div>
+            
+            <input type="email" id="email" placeholder="Email" required>
+            <div class="error" id="emailError">Masukkan email yang valid!</div>
+            
+            <input type="tel" id="phone" placeholder="Nomor Telepon" required>
+            <div class="error" id="phoneError">Masukkan nomor telepon yang valid!</div>
+            
+            <input type="date" id="visitDate" placeholder="Tanggal Kunjungan" required>
+            <div class="error" id="dateError">Tanggal kunjungan harus diisi!</div>
+            
+            <input type="number" id="participants" placeholder="Jumlah Peserta" min="1" required>
+            <div class="error" id="participantsError">Jumlah peserta harus lebih dari 0!</div>
+
+            <input type="text" id="location" placeholder="Lokasi" min="2" required>
+            <div class="error" id="locationError">Jumlah wisata minimal 2!</div>
+            
+            <input type="submit" value="Daftar">
+        </form>
+    </div>
+
+    <script>
+        function validateForm() {
+            
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var phone = document.getElementById("phone").value;
+            var visitDate = document.getElementById("visitDate").value;
+            var participants = document.getElementById("participants").value;
+            var location = document.getElementById("location").value;
+            
+            
+            document.getElementById("nameError").style.display = "none";
+            document.getElementById("emailError").style.display = "none";
+            document.getElementById("phoneError").style.display = "none";
+            document.getElementById("dateError").style.display = "none";
+            document.getElementById("participantsError").style.display = "none";
+            document.getElementById("location").style.display = "none";
+
+          
+            if (name === "") {
+                document.getElementById("nameError").style.display = "block";
+                return false;
+            }
+
+            
+            var emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+            if (!email.match(emailPattern)) {
+                document.getElementById("emailError").style.display = "block";
+                return false;
+            }
+
+           
+            var phonePattern = /^[0-9]{10,13}$/;
+            if (!phone.match(phonePattern)) {
+                document.getElementById("phoneError").style.display = "block";
+                return false;
+            }
+
+           
+            if (visitDate === "") {
+                document.getElementById("dateError").style.display = "block";
+                return false;
+            }
+
+            
+            if (participants <= 0) {
+                document.getElementById("participantsError").style.display = "block";
+                return false;
+            }
+
+            if (location === "") {
+                document.getElementById("locationError").style.display = "block";
+                return false;
+            }
+
+           
+            alert("Pendaftaran berhasil!");
+            return true;
+        }
+    </script>
+
+</body>
+</html>
