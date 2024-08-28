@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Berita Terbaru Bogor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .header {
+            text-align: center;
+            padding: 20px;
+            background-color: #4CAF50;
+            color: white;
+        }
+        .content {
+            margin-top: 20px;
+        }
+        .image {
+            width: 100%;
+            height: auto;
+        }
+        .video-frame {
+            margin: 20px 0;
+            display: flex;
+            justify-content: center;
+        }
+        iframe {
+            width: 100%;
+            height: 400px;
+            border: none;
+        }
+        .table-container {
+            margin: 20px 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        .form-container {
+            margin: 20px 0;
+            background-color: #f2f2f2;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .form-container input[type="text"], .form-container input[type="email"], .form-container textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .form-container input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>Berita Terkini dari Bogor</h1>
+        <p>Informasi terbaru seputar Kota Bogor</p>
+    </div>
+
+    <div class="content">
+        <h2>Cuaca Sejuk di Bogor Menarik Banyak Wisatawan</h2>
+        <img src="https://example.com/bogor_image.jpg" alt="Pemandangan Kota Bogor" class="image">
+        
+        <p>Bogor, kota dengan julukan "Kota Hujan", kembali menjadi sorotan wisatawan lokal dan mancanegara berkat cuaca sejuk dan pesonanya yang tak tertandingi. Berikut adalah beberapa tempat wisata yang sedang populer di Bogor:</p>
+
+        <ul>
+            <li>Kebun Raya Bogor</li>
+            <li>Istana Bogor</li>
+            <li>Taman Safari Indonesia</li>
+            <li>Puncak Bogor</li>
+        </ul>
+
+        <h3>Fasilitas Terbaru di Bogor</h3>
+        <p>Selain tempat wisata yang telah terkenal, Bogor juga menghadirkan fasilitas-fasilitas baru untuk meningkatkan kenyamanan wisatawan:</p>
+
+        <ol>
+            <li>Peningkatan akses jalan menuju Puncak</li>
+            <li>Penambahan hotel dan penginapan dengan konsep alam</li>
+            <li>Restoran dengan konsep unik di atas bukit</li>
+        </ol>
+
+        <div class="video-frame">
+            <iframe src="https://www.youtube.com/embed/video_id" allowfullscreen></iframe>
+        </div>
+
+        <p>Untuk informasi lebih lanjut tentang wisata di Bogor, kunjungi <a href="https://bogor-tourism.com">Bogor Tourism</a>.</p>
+
+        <div class="table-container">
+            <h3>Data Kunjungan Wisatawan ke Bogor</h3>
+            <table>
+                <tr>
+                    <th>Tahun</th>
+                    <th>Jumlah Wisatawan</th>
+                </tr>
+                <tr>
+                    <td>2020</td>
+                    <td>2,000,000</td>
+                </tr>
+                <tr>
+                    <td>2021</td>
+                    <td>2,500,000</td>
+                </tr>
+                <tr>
+                    <td>2022</td>
+                    <td>3,000,000</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="form-container">
+            <h3>Berikan Komentar Anda</h3>
+            <form action="/submit_comment" method="post">
+                <label for="name">Nama:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="comment">Komentar:</label>
+                <textarea id="comment" name="comment" rows="4" required></textarea>
+
+                <input type="submit" value="Kirim">
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BogorWeb</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #1e2a38, #2a3d5a);
+            color: #ffffff;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px;
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 12px;
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+            max-width: 80%;
+            width: 600px;
+            animation: scaleIn 1s ease-out;
+        }
+
+        h1 {
+            font-size: 4em;
+            font-weight: bold;
+            color: #ffffff;
+            text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.5);
+            margin: 0;
+            animation: fadeInUp 2s ease-in-out;
+        }
+
+        h2 {
+            font-size: 1.5em;
+            color: #ffcc00;
+            margin-top: 20px;
+            font-weight: 300;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes scaleIn {
+            from {
+                transform: scale(0.9);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>TOUR GUIDE</h1>
+        <h2>Juan Ripandi</h2>
+    </div>
+</body>
+</html>

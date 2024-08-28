@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tempat Wisata di Bogor</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #a8c0ff, #3f5efb);
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .table-container {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            max-width: 1000px;
+            width: 100%;
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+            font-size: 16px;
+            vertical-align: top;
+        }
+
+        th {
+            background-color: #3f5efb;
+            color: #ffffff;
+            font-weight: 700;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        img {
+            width: 150px;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .description {
+            max-width: 300px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="table-container">
+        <h1>Tempat Wisata di Bogor</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Foto</th>
+                    <th>Nama Tempat</th>
+                    <th>Lokasi</th>
+                    <th>Deskripsi</th>
+                    <th>Harga Tiket</th>
+                    <th>Jam Operasional</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><img src="safari.jpeg" alt="Taman Safari Bogor"></td>
+                    <td>Taman Safari Bogor</td>
+                    <td>Cisarua, Bogor</td>
+                    <td class="description">Taman Safari Bogor adalah tempat wisata yang menawarkan pengalaman melihat berbagai jenis hewan dari dekat dan menikmati berbagai atraksi menarik.</td>
+                    <td>Rp 150.000</td>
+                    <td>09:00 - 17:00</td>
+                </tr>
+                <tr>
+                    <td><img src="taman.jpeg" alt="Taman Bunga Cempaka Bogor"></td>
+                    <td>Taman Bunga Cempaka</td>
+                    <td>Tanah Sareal, Bogor</td>
+                    <td class="description">Taman Bunga Cempaka adalah taman yang memiliki koleksi berbagai jenis bunga dengan pemandangan yang indah dan cocok untuk bersantai.</td>
+                    <td>Rp 25.000</td>
+                    <td>08:00 - 18:00</td>
+                </tr>
+                <tr>
+                    <td><img src="curug.jpeg" alt="Curug Cilember"></td>
+                    <td>Curug Cilember</td>
+                    <td>Cisarua, Bogor</td>
+                    <td class="description">Curug Cilember adalah air terjun yang terletak di daerah pegunungan dengan suasana alam yang sejuk dan asri, ideal untuk hiking dan berfoto.</td>
+                    <td>Rp 30.000</td>
+                    <td>08:00 - 16:00</td>
+                </tr>
+                <tr>
+                    <td><img src="cibaliung.jpeg" alt="Air Terjun Cibaliung"></td>
+                    <td>Air Terjun Cibaliung</td>
+                    <td>Leuwiliang, Bogor</td>
+                    <td class="description">Air Terjun Cibaliung merupakan tempat wisata alam yang menawarkan keindahan air terjun dengan pemandangan yang menakjubkan dan udara segar.</td>
+                    <td>Rp 20.000</td>
+                    <td>08:00 - 17:00</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>

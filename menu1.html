@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BogorWeb</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #f0f4f7;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .menu {
+            text-align: center;
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 100%;
+            max-width: 300px;
+        }
+
+        .menu h1 {
+            color: #003366;
+            font-size: 24px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .menu ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .menu li {
+            margin: 10px 0;
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: #6b4f3b;
+            font-size: 18px;
+            font-weight: 500;
+            display: inline-block;
+            padding: 10px 15px;
+            border-radius: 4px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .menu a:hover {
+            background-color: #6b4f3b;
+            color: #ffffff;
+            transform: scale(1.05);
+        }
+
+        .menu a::after {
+            content: '➤';
+            margin-left: 10px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .menu a:hover::after {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="menu">
+        <h1>Menu</h1>
+        <ul>
+            <li><a href="home.html" target="kanan">Home</a></li>
+            <li><a href="kontak.html" target="kanan">Kontak</a></li>
+            <li><a href="regris.html" target="kanan">Regristasi</a></li>
+            <li><a href="profil.html" target="kanan">Profil</a></li>
+            <li><a href="wisata.html" target="kanan">Wisata</a></li>
+        </ul>
+    </div>
+</body>
+</html>
